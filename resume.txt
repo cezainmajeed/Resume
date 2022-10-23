@@ -1,0 +1,300 @@
+%-------------------------
+% Resume in Latex
+% Author : Tejas Khairnar
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+\usepackage{color}
+\definecolor{light}{rgb}{0.5, 0.5, 0.5}
+\def\light#1{{\color{light}#1}}
+
+
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=2.2ex, y=2.2ex, baseline=-0.5ex]{% 
+        \begin{scope}[x=1.5ex, y=1.5ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+
+
+% Set the margins
+\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.2cm}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2 
+    \end{tabular*}
+    \vspace{0mm}
+}
+
+\newcommand{\resumeExp}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-6.1mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1mm}\\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-6.5mm}
+}
+
+\newcommand{\resumeEdu}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{#3}\vspace{-1mm} \\
+        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-3.2mm}
+}
+
+\newcommand{\resumeAchieve}[3]
+{
+\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+\vspace{0mm}\\
+}
+
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+
+\renewcommand{\arraystretch}{1}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\newcommand{\name}{Cezain Majeed} % Your Name
+\newcommand{\course}{B.Tech - Electrical Engineering} % Your Course
+\newcommand{\roll}{2019UGEE028} % Your Roll No.
+\newcommand{\phone}{8102017475} % Your Phone Number
+\newcommand{\emaila}{cezainmajeed0713@gmail.com} %Email 1
+\newcommand{\github}{https://github.com/cezainmajeed} %Github
+\newcommand{\website}{https://example.com} %Website
+\newcommand{\linkedin}{https://www.linkedin.com/in/cezainmajeed/} %linkedin
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+
+%----------HEADING-----------------
+\begin{center}
+    \LARGE{\textbf{\name}}
+\end{center}
+\vspace{-5.5mm}
+\begin{center}
+    \small{\href{https://github.com/cezainmajeed}{\faGithub \hspace{0.2mm} github/cezainmajeed} |  \href{https://www.linkedin.com/in/cezainmajeed/}{\faLinkedinSquare \hspace{0.2mm} linkedin/cezainmajeed} | \href{mailto:\emaila}{\faSend \hspace{0.2mm} \emaila} | \faPhone \hspace{0.2mm} +91-\phone }
+\end{center}
+\vspace{-3mm}
+
+%-----------EDUCATION-----------------
+
+\vspace{-3.5mm}
+\section{Education}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{National Institute of Technology Jamshedpur, India} 
+{Bachelors of Technology in Electrical Engineering} 
+{Jul 2019 - May 2023} %Event Dates
+{\textbf{GPA: 8.22/10.0}} %Website
+\resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+\vspace{1.5mm}
+\resumeSubHeadingListStart
+\resumeEdu
+{Rajkamal Saraswati Vidya Mandir, Dhanbad} 
+{Class XII - PCM} 
+{2016 - 2018} %Event Dates
+{\textbf{Percentage: 85.6}} %Website
+\resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+\vspace{1.5mm}
+\resumeSubHeadingListStart
+\resumeEdu
+{Dhanbad City School, Dhanbad} 
+{Class X} 
+{2014 - 2016} %Event Dates
+{\textbf{GPA: 9.8/10.0}} %Website
+\resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeExp
+{Samsung Research Institute - Bangalore | Network Call and OAM Team}
+{Software Development Engineer Intern}
+{May 2022 - Jul 2022}
+{}
+\resumeItemListStart
+\item[$\bullet$] Worked on \textbf{Unit Testing} of \textbf{LTE network} deployed on server.
+\item[$\bullet$] Wrote test cases for \textbf{200+ functions} with \textbf{line coverage} of \textbf{more than 75 percent}.
+\item[$\bullet$] Tools Used : \textbf{MobaXterm}, \textbf{winSCP}, \textbf{Beyond Compare}, \textbf{Source Insight}, \textbf{Vim}. 
+\resumeItemListEnd
+\vspace{1mm}
+
+\resumeExp
+{Electrical Engineering Society - NIT Jamshedpur | Web Team}
+{Full Stack Developer}
+{Mar 2021 - Present}
+{}
+\resumeItemListStart
+\item[$\bullet$] Designed and Developed \textbf{RESTful API} for front-end and back-end communication.
+\item[$\bullet$] Designed Home page and Events page.
+\item[$\bullet$] Tech used: \textbf{Node.Js}, \textbf{Express.Js}, \textbf{React.Js}, \textbf{Mongo.DB}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+{CrowdCoin | \light{\underline{\href{https://github.com/cezainmajeed/crowdcoin-blockchain}{Source Code}}} | \light{\underline{\href{https://crowdcoin-six.vercel.app/}{Live Link}}}}
+{} %Project Name, Location Name
+{} %Event Dates
+{} 
+\vspace{-3mm}
+\resumeItemListStart
+\item[$\bullet$] A \textbf{Block-chain} based \textbf{Decentralized App} to connect investors, students, entrepreneurs and researchers.
+\item[$\bullet$] Used \textbf{Solidity} to write \textbf{Smart contracts}.
+\item[$\bullet$] \textbf{Deployed} contracts to \textbf{Rinkeby test network} using \textbf{Ganache}, \textbf{Truffle} and \textbf{Infura}.
+\item[$\bullet$] Used \textbf{Next.js} for user-friendly \textbf{front-end}.
+\resumeItemListEnd
+
+
+\resumeProject
+{E-Shop, NIT Jamshedpur | \light{\underline{\href{https://github.com/cezainmajeed/eshop}{Source Code}}} | \light{\underline{\href{https://cryptic-plains-20900.herokuapp.com/}{Live Link}}}} %Project Name
+{} %Project Name, Location Name
+{} %Event Dates
+{} %Website
+\vspace{-3mm}
+\resumeItemListStart
+\item[$\bullet$] A web application for buy, exchange and sell used items within institute campus.
+\item[$\bullet$] Designed and Developed with \textbf{back-end} on \textbf{Node.js} , \textbf{Express.js} and \textbf{MongoDB}.
+\item[$\bullet$] Secure \textbf{sign-up/login} and \textbf{authenticating} users using \textbf{passport.js}.
+\item[$\bullet$] Used \textbf{HTML}, \textbf{CSS} and \textbf{Bootstrap} for user friendly \textbf{front-end}.
+\resumeItemListEnd
+
+\resumeProject
+{Blog Website | \light{\underline{\href{https://github.com/cezainmajeed/Blog-mern}{Source Code}}} | \light{\underline{\href{https://mernblogwebsite.herokuapp.com/login}{Live Link}}}} %Project Name
+{} %Project Name, Location Name
+{} %Event Dates
+{} %Website
+\vspace{-3mm}
+\resumeItemListStart
+\item[$\bullet$] A multi-user web application where user can write and read blogs.
+\item[$\bullet$] Used \textbf{React.js} and \textbf{Bootstrap} for user friendly \textbf{front-end}.
+\item[$\bullet$] Designed and Developed with \textbf{back-end} on \textbf{Node.js} , \textbf{Express.js} and \textbf{MongoDB}.
+\item[$\bullet$] Secure \textbf{sign-up/login} and \textbf{authenticating} users using \textbf{Google Firebase}.
+\resumeItemListEnd
+
+
+\vspace{-5.5mm}
+\section{Technical Skills}
+\vspace{0.2mm}
+
+\small{\begin{tabular*}{\textwidth}[t]{p{1\textwidth} p{0.5\textwidth}}
+
+\hspace{-3.1mm}{\textbf{ Programming:} C++, C, Data Structures, Algorithms, OOPs} \\
+\hspace{-3.1mm}{\textbf{ Web Development:} HTML, CSS, JavaScript, Node.JS, Express.JS, React.JS, Next.JS, RESTful API} \\ \hspace{-3.1mm}{\textbf{ Databases:} Mongo.DB, MySQL} \\ \hspace{-3.1mm}{\textbf{ Blockchain Development:} Ethereum, Solidity, Web3} \\ \hspace{-3.1mm}{\textbf{ Miscellaneous:} Git/GitHub, Postman} \\
+\end{tabular*}}
+
+\vspace{-4.5mm}
+
+\section{Achievements}
+\vspace{0.2mm}
+
+
+\resumeItemListStart
+\item[$\bullet$] \textbf{4010 Rank} in \textbf{Google Hash Code 2022} (Qualification Round). \href{https://drive.google.com/file/d/1_zUoOvshE9PhKkNuaMKtGXWotR3svGJC/view?usp=sharing}{\ExternalLink}
+\item[$\bullet$] Solved \textbf{750+} DSA problems on \textbf{GeeksForGeeks}. Coding score : \textbf{2200+}. \href{https://auth.geeksforgeeks.org/user/cezainmajeed0713/practice}{\ExternalLink}
+\item[$\bullet$] Solved \textbf{300+} DSA problems on \textbf{LeetCode}. Contest Rating : \textbf{1751 (top 9\%)}. \href{https://leetcode.com/Cezain_Majeed/}{\ExternalLink}
+\item[$\bullet$] 5 star in \textbf{Problem Solving}, 5 star in \textbf{C++ language}, 4 star in \textbf{SQL} in \textbf{HackerRank}. \href{https://www.hackerrank.com/cezainmajeednit1}{\ExternalLink}
+\item[$\bullet$] Secured a rank around \textbf{top 2.6\%} in \textbf{JEE Mains (2019)} among \textbf{1 million candidates}.
+\resumeItemListEnd
+\vspace{-3.5mm}
+
+
+\hspace*{-2mm}\rule{1.030\textwidth}{0.1mm}
+\vspace{0mm}
+
+%-------------------------------------------
+\end{document}
